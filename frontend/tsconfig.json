@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* --- 既存の設定 --- */
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+
+    /* --- ここがポイント！ --- */
+    "baseUrl": ".",          // ← ルートを「frontend」直下に
+    "paths": {
+      "@/*": ["./*"]         // ← "@/globals.css" → frontend/globals.css
+    }
+  },
+
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
